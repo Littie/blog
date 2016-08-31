@@ -691,6 +691,10 @@ label {
     margin: 0 0 3px;
 }
 
+hr {
+    margin: 15px 0;
+}
+
 /* line 554, ../sass/_typography.scss */
 .required {
     color: #c3293a;

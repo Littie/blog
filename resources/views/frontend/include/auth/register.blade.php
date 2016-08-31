@@ -17,31 +17,31 @@
                 @endif
             </div>
 
-            <div class="form-group{{ $errors->has('reg_email')? ' has-error ' : '' }}">
-                <label for="reg_email">E-Mail Address: <span class="required">*</span></label>
-                <input class="form-control" type="email" id="reg_email" name="reg_email" value="{{ old('reg_email') }}">
+            <div class="form-group{{ $errors->has('email')? ' has-error ' : '' }}">
+                <label for="email">E-Mail Address: <span class="required">*</span></label>
+                <input class="form-control" type="email" id="email" name="email" value="{{ old('email') }}">
 
-                @if ($errors->has('reg_email'))
+                @if ($errors->has('email'))
                     <span class="help-block">
-                        <strong>{{ $errors->first('reg_email') }}</strong>
+                        <strong>{{ $errors->first('email') }}</strong>
                     </span>
                 @endif
             </div>
 
-            <div class="form-group{{ $errors->has('reg_password')? ' has-error ' : '' }}">
-                <label for="reg_password">Password: <span class="required">*</span></label>
-                <input class="form-control" type="password" id="reg_password" name="reg_password">
+            <div class="form-group{{ $errors->has('password')? ' has-error ' : '' }}">
+                <label for="password">Password: <span class="required">*</span></label>
+                <input class="form-control" type="password" id="password" name="password">
 
-                @if ($errors->has('reg_password'))
+                @if ($errors->has('password'))
                     <span class="help-block">
-                        <strong>{{ $errors->first('reg_password') }}</strong>
+                        <strong>{{ $errors->first('password') }}</strong>
                     </span>
                 @endif
             </div>
 
             <div class="form-group">
-                <label for="reg_password_confirmation" class="control-label">Confirm password: <span class="required">*</span></label>
-                <input class="form-control" type="password" id="reg_password_confirmation" name="reg_password_confirmation">
+                <label for="password_confirmation" class="control-label">Confirm password: <span class="required">*</span></label>
+                <input class="form-control" type="password" id="password_confirmation" name="password_confirmation">
             </div>
 
             <div class="buttons-box clearfix">

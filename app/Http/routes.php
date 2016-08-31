@@ -25,6 +25,9 @@ Route::get('{user}/article', ['uses' => 'UserController@index', 'as' => 'user.ar
 Route::get('{user}/article/create', ['uses' => 'UserController@create', 'as' => 'user.article.create']);
 Route::post('{user}/article/store', ['uses' => 'UserController@store', 'as' => 'user.article.store']);
 Route::get('{user}/article/{id}', ['uses' => 'UserController@show', 'as' => 'user.article.show'])->where('id', '\d+');
+Route::delete('{user}/article/{id}', ['uses' => 'UserController@destroy', 'as' => 'user.article.destroy'])->where('id', '\d+');
+Route::get('{user}/article/edit/{id}', ['uses' => 'UserController@edit', 'as' => 'user.article.edit'])->where('id', '\d+');
+Route::put('{user}/article/update/{id}', ['uses' => 'UserController@update', 'as' => 'user.article.update'])->where('id', '\d+');
 Route::get('{user}/article/all', ['uses' => 'UserController@all', 'as' => 'user.article.all']);
 Route::get('{user}/article/published', ['uses' => 'UserController@published', 'as' => 'user.article.published']);
 Route::get('{user}/article/unpublished', ['uses' => 'UserController@unpublished', 'as' => 'user.article.unpublished']);

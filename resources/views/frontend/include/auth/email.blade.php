@@ -6,13 +6,13 @@
             <h3 class="title">Retrieve your password here</h3>
             <p>Please enter your email address below. You will receive a link to reset your password.</p>
 
-            <div class="form-group{{ $errors->has('res_email') ? ' has-error' : '' }}">
-                <label for="res_email">Email Address <span class="required">*</span></label>
-                <input class="form-control" type="email" id="res_email" name="res_email">
+            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input class="form-control" type="email" id="email" name="email">
 
-                @if ($errors->has('res_email'))
+                @if ($errors->has('email'))
                     <span class="help-block">
-                         <strong>{{ $errors->first('res_email') }}</strong>
+                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                 @endif
             </div>

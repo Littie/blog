@@ -32,6 +32,7 @@
 <script src="{{ asset('js/jquery.selectBox.min.js') }}"></script>
 <script src="{{ asset('js/jquery.royalslider.min.js') }}"></script>
 <script src="{{ asset('js/jquery.tubular.1.0.js') }}"></script>
+<script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
 <script src="{{ asset('js/SmoothScroll.js') }}"></script>
 <script src="{{ asset('js/country.js') }}"></script>
 <script src="{{ asset('js/spin.min.js') }}"></script>

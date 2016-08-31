@@ -9,7 +9,7 @@
                 <img class="replace-2x image img-circle" src="content/img/product-1.jpg" alt="" title="" width="84" height="84">
                 <div class="meta">
                     <span>{{ $user->name }}</span>,
-                    <span class="time">{{ $article->published_at }}</span>
+                    <span class="time">{{ $article->published_at->diffForHumans() }}</span>
                 </div>
                 <div class="description">
                     <a href="{{ url($user->name . '/article/' . $article->id) }}">

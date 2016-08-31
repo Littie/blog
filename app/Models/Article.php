@@ -11,15 +11,17 @@ class Article extends Model
         'title', 'excerpt', 'body', 'published_at', 'user_id', 'blog_id'
     ];
 
+    protected $dates = ['published_at'];
+
     public function user() {
         return $this->belongsTo('App\User');
     }
 
     public function scopePublished($query) {
-        return $query->where('published_at', '<=', Carbon::now());
+        return $query->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
     }
     
     public function scopeUnpublished($query) {
-        return $query->where('published_at', '>=', Carbon::now());
+        return $query->where('published_at', '>=', Carbon::now())->orderBy('published_at', 'desc');
     }
 }

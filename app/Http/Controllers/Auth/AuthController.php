@@ -51,21 +51,21 @@ class AuthController extends Controller
 //        dd($data);
 
         $messages = [
-            'reg_email.required' => 'We need to know your email address',
-            'reg_email.email' => 'Enter correct email address format',
-            'reg_email.max' => 'Email must contain max :max characters',
-            'reg_email.unique' => 'Sorry, this email is busy',
+            'email.required' => 'We need to know your email address',
+            'email.email' => 'Enter correct email address format',
+            'email.max' => 'Email must contain max :max characters',
+            'email.unique' => 'Sorry, this email is busy',
 
-            'reg_password.required' => 'We need to know your password',
-            'reg_password.min' => 'Password must contain min :min characters',
-            'reg_password.confirmed' => 'Password confirmation do not match',
+            'password.required' => 'We need to know your password',
+            'password.min' => 'Password must contain min :min characters',
+            'password.confirmed' => 'Password confirmation do not match',
         ];
 
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'reg_email' => 'required|email|max:255|unique:users,email',
-            'reg_password' => 'required|min:6|confirmed',
-            'reg_password_confirmation' => 'required|min:6|same:reg_password',
+            'email' => 'required|email|max:255|unique:users,email',
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required|min:6|same:reg_password',
         ], $messages);
     }
 

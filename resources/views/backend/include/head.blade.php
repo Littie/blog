@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('css/datepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/datepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.scrollbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jslider.css') }}">
