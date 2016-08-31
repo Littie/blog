@@ -5,7 +5,7 @@
         <div class="content-block bottom-padding frame-shadow-raised">
             <h2 class="text-center">{{ $article->title }}</h2>
             {!! $article->body !!}
-
+            <hr>
             <div class="entry-meta">
                 <span class="autor-name">{{ $user->name }}</span>,
                 <span class="time">{{ $article->published_at->diffForHumans() }}</span>
