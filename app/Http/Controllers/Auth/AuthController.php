@@ -83,4 +83,16 @@ class AuthController extends Controller
             'password' => bcrypt($data['reg_password']),
         ]);
     }
+    
+    public function showLoginForm()
+    {
+        $view = property_exists($this, 'loginView')
+            ? $this->loginView : 'auth.authenticate';
+
+        if (view()->exists($view)) {
+            return view($view);
+        }
+
+        return view('frontend.include.auth.index');
+    }
 }
