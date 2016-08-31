@@ -17818,3 +17818,7 @@ a.big-icon:hover {
     -webkit-overflow-scrolling: touch !important;
     top: 20px !important;
 }
+
+.post {
+    margin-bottom: 0;
+}
