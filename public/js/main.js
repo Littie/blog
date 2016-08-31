@@ -509,24 +509,24 @@ function loginRegister() {
 
 	form.css('height', height);
 
-    if (localStorage.getItem('create') == 'true') {
+    if (sessionStorage.getItem('create') == 'true') {
         $('.form-content').removeClass('hidden');
         $('.forgot-form').closest('.form-content').addClass('hidden');
         $('.login-register .rotation').toggleClass('hover');
-    } else if (localStorage.getItem('reset') == 'true') {
+    } else if (sessionStorage.getItem('reset') == 'true') {
         $('.form-content').removeClass('hidden');
         $('.register-form').closest('.form-content').addClass('hidden');
         $('.login-register .rotation').toggleClass('hover');
     }
 
     $('.create').click(function () {
-            localStorage.setItem('create', true);
-            localStorage.removeItem('reset', true);
+        sessionStorage.setItem('create', true);
+        sessionStorage.removeItem('reset', true);
     });
 
     $('.reset').click(function () {
-        localStorage.setItem('reset', true);
-        localStorage.removeItem('create', true);
+        sessionStorage.setItem('reset', true);
+        sessionStorage.removeItem('create', true);
     });
 
 
@@ -549,7 +549,7 @@ function loginRegister() {
             $('.form-content').removeClass('hidden');
 			$('.forgot-form').closest('.form-content').addClass('hidden');
 		} else {
-            localStorage.clear();
+            sessionStorage.clear();
             $('.form-group').removeClass('has-error');
             $('.form-content .form-group span').remove();
         }
