@@ -11,9 +11,21 @@ use Illuminate\Support\Facades\Input;
 
 class BlogController extends Controller
 {
+    const ARTICLE_PER_PAGE = 7;
+
     public function index()
     {
         
+    }
+
+    public function show($id)
+    {
+        return view('frontend.guest.blog',
+            [
+                'user' => User::where('blog_id', $id)->first(),
+                'blog' => Blog::find($id),
+                'articles' => User::where('blog_id', $id)->first()->articles()->published()->paginate(self::ARTICLE_PER_PAGE)
+            ]);
     }
 
     public function create()

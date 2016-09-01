@@ -30,7 +30,7 @@
                                             <a href="#">Blogs</a>
                                         </li>
                                         <li class="parent">
-                                            <a href="#">Users</a>
+                                            <a href="{{ url('/users') }}">Users</a>
                                         </li>
                                         <li class="parent">
                                             <a href="#">About</a>

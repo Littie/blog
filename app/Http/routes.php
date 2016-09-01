@@ -40,3 +40,7 @@ Route::post('blog/store', ['uses' => 'BlogController@store', 'as' => 'blog.store
 Route::get('article/create', ['uses' => 'ArticleController@create', 'as' => 'article.create']);
 Route::post('article/store', ['uses' => 'ArticleController@store', 'as' => 'article.store']);
 Route::get('article/{id}', ['uses' => 'ArticleController@show', 'as' => 'article.show']);
+
+/* Guests routtes */
+Route::get('users', ['uses' => 'GuestController@users', 'as' => 'guest.users']);
+Route::get('blog/{id}', ['uses' => 'BlogController@show', 'as' => 'blog.show']);
