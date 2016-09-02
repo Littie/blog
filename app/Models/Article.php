@@ -21,6 +21,10 @@ class Article extends Model
         return $this->hasMany('App\Models\Comment');
     }
 
+    public function tags() {
+        return $this->belongsToMany('App\Models\Tag');
+    }
+
     public function scopePublished($query) {
         return $query->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
     }

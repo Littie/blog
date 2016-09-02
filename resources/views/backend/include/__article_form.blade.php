@@ -37,6 +37,15 @@
                 @endif
             </div>
 
+            <div class="form-group">
+                <label for="tag">Tag:</label>
+                <select multiple class="form-control" id="tag" name="tags[]">
+                    @foreach ($tags as $tag)
+                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
             <div class="form-group{{ $errors->has('excerpt')? ' has-error ' : '' }}">
                 <label for="excerpt">Article Excerpt: <span class="required">*</span></label>
                 <textarea class="form-control" id="excerpt" name="excerpt" rows="3">{{ isset($article->excerpt)? $article->excerpt : old('excerpt') }}</textarea>

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ArticlesHelper;
 use App\Http\Requests;
 use App\Http\Requests\ArticlesRequest;
 use App\Models\Article;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -37,6 +39,7 @@ class UserController extends Controller
                 'method' => '',
                 'action' => '/article/store',
                 'title' => 'Create article',
+                'tags' => Tag::all(),
                 'btn' => 'Create article',
                 'flash' => str_replace(' ', '_', strtoupper(self::ARTICLE_HAS_BEEN_CREATED))
             ]);
@@ -44,7 +47,10 @@ class UserController extends Controller
 
     public function store(ArticlesRequest $request)
     {
+//        dd($request->all());
         Article::create($request->all() + ['user_id' => Auth::user()->id, 'blog_id' => Auth::user()->blog_id]);
+
+        ArticlesHelper::addTagsToArticle($request->tags);
 
         Session::flash('ARTICLE_HAS_BEEN_CREATED', self::ARTICLE_HAS_BEEN_CREATED);
 
@@ -74,6 +80,7 @@ class UserController extends Controller
                 'action' => '/article/update/' . $id,
                 'article' => Article::find($id),
                 'title' => 'Update article',
+                'tags' => Tag::all(),
                 'btn' => 'Update article',
                 'flash' => str_replace(' ', '_', strtoupper(self::ARTICLE_HAS_BEEN_EDITED))
             ]);
