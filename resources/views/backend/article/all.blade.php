@@ -33,7 +33,7 @@
                         <span class="separator">|</span>
                         <span class="meta">Posted in <a href="#">Sports</a>, <a href="#">Movies</a></span>
 					<span class="comments-link pull-right">
-					  <a href="#"><i class="fa fa-comment"></i> 3 comment(s)</a>
+					  <a href="{{ url($user->name . '/article/' . $article->id) . '#comment'}}"><i class="fa fa-comment"></i> {{ $article->comments()->count() }} comment(s)</a>
 					</span>
                     </div>
                 </div>

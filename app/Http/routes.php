@@ -45,3 +45,5 @@ Route::get('article/{id}', ['uses' => 'ArticleController@show', 'as' => 'article
 Route::get('users', ['uses' => 'GuestController@users', 'as' => 'guest.users']);
 Route::get('blog/{id}', ['uses' => 'BlogController@show', 'as' => 'blog.show']);
 Route::get('blogs', ['uses' => 'BlogController@index', 'as' => 'blog.index']);
+
+Route::post('comment/store', ['uses' => 'CommentController@store', 'as' => 'comment.store']);

@@ -25,16 +25,14 @@
                                         <span class="separator">|</span>
                                         <span class="meta">Posted in <a href="#">Sports</a>, <a href="#">Movies</a></span>
 			                            <span class="comments-link pull-right">
-			                                <a href="#"><i class="fa fa-comment"></i> 3 comment(s)</a>
+			                                <a href="{{ url('/article/' . $article->id) . '#comment'}}"><i class="fa fa-comment"></i> {{ $article->comments()->count() }} comment(s)</a>
 			                            </span>
                                     </footer>
                                 </article><!-- .post -->
                             @endforeach
 
-
                             <div class="pagination-box">
                                 {{ $articles->links() }}
-                                {{--<i class="pagination-text">Displaying {{ $articles->total() > 0 ? $articles->currentPage() *  $articles->perPage(): '0' }} to {{ $articles->hasMorePages() ? $articles->total() : $articles->total() == 0 ? '0' : $articles->perPage()}} (of {{ $articles->total() }} posts)</i>--}}
                             </div><!-- .pagination-box -->
                         </div><!-- .content -->
 
