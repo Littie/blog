@@ -15,14 +15,18 @@ class BlogController extends Controller
 
     public function index()
     {
+        $blogs = Blog::orderBy('created_at', 'desc')->paginate(self::ARTICLE_PER_PAGE);
         
+        return view('frontend.guest.blogs',
+            [
+                'blogs' => $blogs,
+            ]);
     }
 
     public function show($id)
     {
         return view('frontend.guest.blog',
             [
-                'user' => User::where('blog_id', $id)->first(),
                 'blog' => Blog::find($id),
                 'articles' => User::where('blog_id', $id)->first()->articles()->published()->paginate(self::ARTICLE_PER_PAGE)
             ]);
@@ -34,7 +38,7 @@ class BlogController extends Controller
             return back();
         }
 
-        return view('backend.blog.create', ['user' => Auth::user()]);
+        return view('backend.blog.create');
     }
 
     public function store()

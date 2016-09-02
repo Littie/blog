@@ -27,7 +27,7 @@
                                             <a href="{{ url('/') }}">Home</a>
                                         </li>
                                         <li class="parent">
-                                            <a href="#">Blogs</a>
+                                            <a href="{{ url('/blogs') }}">Blogs</a>
                                         </li>
                                         <li class="parent">
                                             <a href="{{ url('/users') }}">Users</a>

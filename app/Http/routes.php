@@ -44,3 +44,4 @@ Route::get('article/{id}', ['uses' => 'ArticleController@show', 'as' => 'article
 /* Guests routtes */
 Route::get('users', ['uses' => 'GuestController@users', 'as' => 'guest.users']);
 Route::get('blog/{id}', ['uses' => 'BlogController@show', 'as' => 'blog.show']);
+Route::get('blogs', ['uses' => 'BlogController@index', 'as' => 'blog.index']);
