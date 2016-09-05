@@ -1,4 +1,5 @@
 <footer class="entry-meta">
+    <span class="autor-name">{{ $blog->user['name'] }}</span>,
     <span class="time">{{ $article->published_at->diffForHumans() }}</span>
 
     @if($article->tags()->count() > 0)
@@ -12,7 +13,7 @@
             @endforeach
          </span>
         <span class="comments-link pull-right">
-			  <a href="{{ url($user->name . '/article/' . $article->id) . '#comment'}}"><i class="fa fa-comment"></i> {{ $article->comments()->count() }} comment(s)</a>
+			  <a href="{{ url($article->user->name . '/article/' . $article->id) . '#comment'}}"><i class="fa fa-comment"></i> {{ $article->comments()->count() }} comment(s)</a>
 		</span>
 </footer>
 

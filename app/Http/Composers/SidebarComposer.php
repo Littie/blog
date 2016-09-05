@@ -17,10 +17,11 @@ class SidebarComposer
     }
 
     public function compose(View $view) {
+        $view->with('tags', Tag::all());
+
         if($this->user) {
             $view->with('isBlog', $this->user->blog_id);
             $view->with('user', $this->user);
-            $view->with('tags', Tag::all());
         }
     }
 }
