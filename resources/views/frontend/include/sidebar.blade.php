@@ -31,22 +31,9 @@
             <h3 class="title">Tags</h3>
         </header>
         <ul class="clearfix">
-            <li><a href="#">california</a></li>
-            <li><a href="#">canada</a></li>
-            <li><a href="#">canon</a></li>
-            <li><a href="#">cat</a></li>
-            <li><a href="#">chicago</a></li>
-            <li><a href="#">christmas</a></li>
-            <li><a href="#">mars</a></li>
-            <li><a href="#">church</a></li>
-            <li><a href="#">city</a></li>
-            <li><a href="#">clouds</a></li>
-            <li><a href="#">color</a></li>
-            <li><a href="#">concert</a></li>
-            <li><a href="#">dance</a></li>
-            <li><a href="#">day</a></li>
-            <li><a href="#">dog</a></li>
-            <li><a href="#">travels</a></li>
+            @foreach ($tags as $tag)
+                <li><a href="#">{{ $tag->name }}</a></li>
+            @endforeach
         </ul>
     </aside><!-- .tags -->
 </div><!-- .sidebar -->

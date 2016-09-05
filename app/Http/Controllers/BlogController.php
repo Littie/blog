@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Models\Blog;
+use App\Models\Tag;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
@@ -20,6 +21,7 @@ class BlogController extends Controller
         return view('frontend.guest.blogs',
             [
                 'blogs' => $blogs,
+                'tags' => Tag::all(),
             ]);
     }
 
@@ -28,7 +30,8 @@ class BlogController extends Controller
         return view('frontend.guest.blog',
             [
                 'blog' => Blog::find($id),
-                'articles' => User::where('blog_id', $id)->first()->articles()->published()->paginate(self::ARTICLE_PER_PAGE)
+                'articles' => User::where('blog_id', $id)->first()->articles()->published()->paginate(self::ARTICLE_PER_PAGE),
+                'tags' => Tag::all(),
             ]);
     }
 

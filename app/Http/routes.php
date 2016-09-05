@@ -41,9 +41,12 @@ Route::get('article/create', ['uses' => 'ArticleController@create', 'as' => 'art
 Route::post('article/store', ['uses' => 'ArticleController@store', 'as' => 'article.store']);
 Route::get('article/{id}', ['uses' => 'ArticleController@show', 'as' => 'article.show']);
 
-/* Guests routtes */
+/* Guests routes */
 Route::get('users', ['uses' => 'GuestController@users', 'as' => 'guest.users']);
 Route::get('blog/{id}', ['uses' => 'BlogController@show', 'as' => 'blog.show']);
 Route::get('blogs', ['uses' => 'BlogController@index', 'as' => 'blog.index']);
 
+/* Comments routes */
 Route::post('comment/store', ['uses' => 'CommentController@store', 'as' => 'comment.store']);
+
+Route::get('tag/{name}', ['uses' => 'TagController@show', 'as' => 'tag.show']);
