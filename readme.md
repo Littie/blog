@@ -1,4 +1,4 @@
-## Instalation
+## Installation
 
 <ol>
     <li> git clone https://github.com/Littie/blog.git </li>
