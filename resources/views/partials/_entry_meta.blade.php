@@ -4,11 +4,11 @@
 
     @if($article->tags()->count() > 0)
         <span class="separator">|</span>
-        <span class="meta">Posted in
+        <span class="meta">Posted in |
             @endif
             @foreach ($tags as $tag)
                 @if ($article->tags->contains($tag->id))
-                    <a href="{{ url('/tag/' . $tag->name) }}">{{ $tag->name }}</a>
+                    <a href="{{ url('/tag/' . $tag->name) }}">{{ $tag->name }}</a> |
                 @endif
             @endforeach
          </span>
