@@ -21,7 +21,7 @@
 
                             </article><!-- .post -->
 
-                            @include('frontend.include.comments')
+                            @include('partials._comments')
 
                         </div><!-- .content -->
 
