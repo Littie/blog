@@ -22,12 +22,21 @@
     {{ csrf_field() }}
     <input type="hidden" name="article_id" value="{{ $article->id }}">
 
-    <label for="comment">Comment: <i class="required">*</i> </label>
-    <div class="row">
-        <div class="comment-box col-sm-10 col-md-10 {{ $errors->has('comment')? ' has-error ' : '' }}">
-            <textarea class="form-control" id="comment" name="comment"></textarea>
+    <div class="form-group{{ $errors->has('comment')? ' has-error ' : '' }}">
+        <label for="comment">Comment: <i class="required">*</i> </label>
+        <div class="row">
+            <div class="comment-box col-sm-10 col-md-10 {{ $errors->has('comment')? ' has-error ' : '' }}">
+                <textarea class="form-control" id="comment" name="comment"></textarea>
+            </div>
         </div>
     </div>
+
+    @if ($errors->has('comment'))
+        <span class="help-block text-danger">
+            <strong>{{ $errors->first('comment') }}</strong>
+        </span>
+    @endif
+
 
     <div class="clearfix"></div>
     <div class="button-set">

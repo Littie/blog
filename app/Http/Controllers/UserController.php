@@ -50,7 +50,8 @@ class UserController extends Controller
 //        dd($request->all());
         Article::create($request->all() + ['user_id' => Auth::user()->id, 'blog_id' => Auth::user()->blog_id]);
 
-        ArticlesHelper::addTagsToArticle($request->tags);
+        $article = Article::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->first();
+        $article->tags()->attach($request->tags);
 
         Session::flash('ARTICLE_HAS_BEEN_CREATED', self::ARTICLE_HAS_BEEN_CREATED);
 

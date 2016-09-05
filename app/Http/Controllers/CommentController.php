@@ -12,6 +12,10 @@ class CommentController extends Controller
 {
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'comment' => 'required'
+        ]);
+
         if (Auth::check()) {
             Comment::create($request->all() + ['user_id' => Auth::user()->id]);
         }
