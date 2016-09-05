@@ -38,6 +38,11 @@
                                         <li class="parent">
                                             <a href="#">Contacts</a>
                                         </li>
+                                        @if (Auth::user())
+                                            <li class="parent">
+                                                <a href="{{ url('/logout') }}">Logout</a>
+                                            </li>
+                                        @endif
                                     </ul>
                                 </nav>
                             </div>
