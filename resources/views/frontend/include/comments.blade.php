@@ -30,6 +30,12 @@
             </div>
         </div>
 
+        @if ($errors->has('comment'))
+            <span class="help-block text-danger">
+                <strong>{{ $errors->first('comment') }}</strong>
+            </span>
+        @endif
+
         <div class="clearfix"></div>
         <div class="button-set">
             <span class="required pull-right"><b>*</b> Required Field</span>
