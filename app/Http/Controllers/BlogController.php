@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
-use App\Models\Article;
 use App\Models\Blog;
-use App\Models\Tag;
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
@@ -45,8 +43,13 @@ class BlogController extends Controller
         return view('backend.blog.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|max:30',
+            'description' => 'required|max:120',
+        ]);
+
         Blog::create(Input::all());
 
         $blogID = Blog::where('id', Blog::orderBy('id', 'desc')->first()->id)->first()->id;
