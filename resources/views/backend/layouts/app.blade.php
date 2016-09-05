@@ -2,14 +2,14 @@
 <html lang="en">
 
 {{-- Section of head tag --}}
-@include('partials.app.head')
+@include('partials.app._head')
 
 <body>
 
 <section>
 
     {{--Header section --}}
-    @include('backend.include.header')
+    @include('partials.app._header')
 
     {{-- Main content section --}}
     <div class="container" id="main">
@@ -27,7 +27,7 @@
 </section>
 
 {{-- Javascript include section --}}
-@include('backend.include.javascripts')
+@include('partials.app._javascripts')
 </body>
 </html>
 

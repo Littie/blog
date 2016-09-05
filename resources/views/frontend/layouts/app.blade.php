@@ -2,18 +2,18 @@
 <html lang="en">
 
 {{-- Section of head tag --}}
-@include('partials.app.head')
+@include('partials.app._head')
 
 <body>
 
     {{-- Header section --}}
-    @include('frontend.include.header')
+    @include('partials.app._header')
 
     {{-- Main content section --}}
     @yield('content')
 
     {{-- Javascript include section --}}
-    @include('frontend.include.javascripts')
+    @include('partials.app._javascripts')
 
 </body>
 </html>
