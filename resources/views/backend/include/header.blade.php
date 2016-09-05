@@ -27,17 +27,16 @@
                                             <a href="{{ url('/') }}">Home</a>
                                         </li>
                                         <li class="parent">
-                                            <a href="#">Blogs</a>
+                                            <a href="{{ url('/blogs') }}">Blogs</a>
                                         </li>
                                         <li class="parent">
-                                            <a href="shop.html">Users</a>
+                                            <a href="{{ url('/users') }}">Users</a>
                                         </li>
                                         <li class="parent">
                                             <a href="#">About</a>
                                         </li>
                                         <li class="parent">
                                             <a href="#">Contacts</a>
-                                        </li>
                                         @if (Auth::user())
                                             <li class="parent">
                                                 <a href="{{ url('/logout') }}">Logout</a>
