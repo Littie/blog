@@ -28,6 +28,7 @@
 
 {{-- Javascript include section --}}
 @include('partials.app._javascripts')
+
 </body>
 </html>
 
