@@ -7,7 +7,7 @@
             <section id="main">
                 <header class="page-header">
                     <div class="container">
-                        <h1 class="title">Article by <strong>#{{ $tagName }}</strong> tag</h1>
+                        <h1 class="title">{{ $blog->name }}</h1>
                     </div>
                 </header>
 
@@ -19,3 +19,4 @@
     </div><!-- .page-box -->
     <div class="clearfix"></div>
 @stop
+

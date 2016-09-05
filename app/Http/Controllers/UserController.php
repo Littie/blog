@@ -39,7 +39,6 @@ class UserController extends Controller
                 'method' => '',
                 'action' => '/article/store',
                 'title' => 'Create article',
-                'tags' => Tag::all(),
                 'btn' => 'Create article',
                 'flash' => str_replace(' ', '_', strtoupper(self::ARTICLE_HAS_BEEN_CREATED))
             ]);
@@ -81,7 +80,6 @@ class UserController extends Controller
                 'action' => '/article/update/' . $id,
                 'article' => Article::find($id),
                 'title' => 'Update article',
-                'tags' => Tag::all(),
                 'btn' => 'Update article',
                 'flash' => str_replace(' ', '_', strtoupper(self::ARTICLE_HAS_BEEN_EDITED))
             ]);

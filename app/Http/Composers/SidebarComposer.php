@@ -3,6 +3,7 @@
 namespace App\Http\Composers;
 
 
+use App\Models\Tag;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\View\View;
 
@@ -19,6 +20,7 @@ class SidebarComposer
         if($this->user) {
             $view->with('isBlog', $this->user->blog_id);
             $view->with('user', $this->user);
+            $view->with('tags', Tag::all());
         }
     }
 }

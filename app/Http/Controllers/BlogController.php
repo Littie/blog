@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Models\Article;
 use App\Models\Blog;
 use App\Models\Tag;
 use App\User;
@@ -18,20 +19,20 @@ class BlogController extends Controller
     {
         $blogs = Blog::orderBy('created_at', 'desc')->paginate(self::ARTICLE_PER_PAGE);
         
-        return view('frontend.guest.blogs',
+        return view('frontend.blog.all',
             [
                 'blogs' => $blogs,
-                'tags' => Tag::all(),
             ]);
     }
 
     public function show($id)
     {
-        return view('frontend.guest.blog',
+//        dd(Article::find(49)->tags);
+
+        return view('frontend.blog.show',
             [
                 'blog' => Blog::find($id),
                 'articles' => User::where('blog_id', $id)->first()->articles()->published()->paginate(self::ARTICLE_PER_PAGE),
-                'tags' => Tag::all(),
             ]);
     }
 

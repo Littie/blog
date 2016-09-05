@@ -23,7 +23,7 @@
                                         <span class="autor-name">{{ $blog->user['name'] }}</span>,
                                         <span class="time">{{ $blog->created_at->diffForHumans() }}</span>
                                         <span class="separator">|</span>
-                                        <span class="meta">Tags: <a href="#">Sports</a>, <a href="#">Movies</a></span>
+                                        <span class="meta">Category: <a href="#">Sports</a></span>
                                     </footer>
                                 </article><!-- .post -->
                             @endforeach
