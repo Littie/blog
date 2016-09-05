@@ -32,7 +32,7 @@
         </header>
         <ul class="clearfix">
             @foreach ($tags as $tag)
-                <li><a href="#">{{ $tag->name }}</a></li>
+                <li><a href="{{ url('/tag/' . $tag->name) }}">{{ $tag->name }}</a></li>
             @endforeach
         </ul>
     </aside><!-- .tags -->
