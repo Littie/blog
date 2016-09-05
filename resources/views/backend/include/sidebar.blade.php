@@ -13,20 +13,20 @@
                             <li><a href="{{ url($user->name . '/article/all') }}">View all</a></li>
                         </ul>
                     </li>
-                    <li class="parent">
-                        <a href="#"><span class="open-sub"></span>Blog</a>
-                        <ul class="sub">
-                            <li><a href="#">View</a></li>
-                            <li><a href="#">Edit</a></li>
-                        </ul>
-                    </li>
-                    <li class="parent">
-                        <a href="#"><span class="open-sub"></span>Profile</a>
-                        <ul class="sub">
-                            <li><a href="#">View</a></li>
-                            <li><a href="#">Edit</a></li>
-                        </ul>
-                    </li>
+                    {{--<li class="parent">--}}
+                        {{--<a href="#"><span class="open-sub"></span>Blog</a>--}}
+                        {{--<ul class="sub">--}}
+                            {{--<li><a href="#">View</a></li>--}}
+                            {{--<li><a href="#">Edit</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li class="parent">--}}
+                        {{--<a href="#"><span class="open-sub"></span>Profile</a>--}}
+                        {{--<ul class="sub">--}}
+                            {{--<li><a href="#">View</a></li>--}}
+                            {{--<li><a href="#">Edit</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
                 @endif
             </ul>
         </nav>
