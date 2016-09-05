@@ -25,6 +25,11 @@ class Article extends Model
         return $this->belongsToMany('App\Models\Tag');
     }
 
+    public function blog()
+    {
+        return $this->belongsTo('App\Models\Blog');
+    }
+
     public function scopePublished($query) {
         return $query->where('published_at', '<=', Carbon::now())->orderBy('published_at', 'desc');
     }
