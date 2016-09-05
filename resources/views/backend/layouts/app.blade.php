@@ -2,7 +2,7 @@
 <html lang="en">
 
 {{-- Section of head tag --}}
-@include('backend.include.head')
+@include('partials.app.head')
 
 <body>
 
