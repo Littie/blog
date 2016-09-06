@@ -21,14 +21,6 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.scrollbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/jslider.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ladda.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/morris.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/video-js.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/revslider/settings.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/royalslider/royalslider.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/royalslider/skins/minimal-white/rs-minimal-white.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/layerslider/css/layerslider.css') }}">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
