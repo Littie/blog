@@ -20,7 +20,7 @@
                             </article><!-- .post -->
 
                             @if (Auth::check())
-                                @include('backend.include.comments')
+                                @include('partials._comments')
                             @else()
                                 <h3>Only registered users can show and add comments</h3>
                             @endif
