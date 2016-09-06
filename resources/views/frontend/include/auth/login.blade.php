@@ -29,12 +29,6 @@
                 @endif
             </div>
 
-            <div class="form-group">
-                <label class="checkbox">
-                    <input type="checkbox"> Remember password
-                </label>
-            </div>
-
             <div class="buttons-box clearfix">
                 <button class="btn btn-default" type="submit">Login</button>
                 <a href="#" class="switch-form forgot">Forgot Your Password?</a>

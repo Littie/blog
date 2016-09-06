@@ -11,7 +11,9 @@
 <script src="{{ asset('js/jquery-1.9.1.min.js') }}"></script>
 <!--<![endif]-->
 
+
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/moment.js') }}"></script>
 <script src="{{ asset('js/jquery.imagesloaded.min.js') }}"></script>
 <script src="{{ asset('js/jquery.appear.js') }}"></script>
 <script src="{{ asset('js/jquery.fancybox.pack.js') }}"></script>
@@ -19,6 +21,7 @@
 <script src="{{ asset('js/jquery.selectBox.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
 <script src="{{ asset('js/SmoothScroll.js') }}"></script>
+
 
 <script src="{{ asset('js/bootstrapValidator.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
