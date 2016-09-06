@@ -25,7 +25,5 @@
 
 <script src="{{ asset('js/bootstrapValidator.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('js/jplayer/jquery.jplayer.min.js') }}"></script>
-<script src="{{ asset('js/jplayer/jplayer.playlist.min.js') }}"></script>
 <script src="{{ asset('js/jquery.scrollbar.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
