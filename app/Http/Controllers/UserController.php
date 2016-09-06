@@ -44,7 +44,6 @@ class UserController extends Controller
 
     public function store(ArticlesRequest $request)
     {
-//        dd($request->all());
         Article::create($request->all() + ['user_id' => Auth::user()->id, 'blog_id' => Auth::user()->blog_id]);
 
         $article = Article::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->first();
